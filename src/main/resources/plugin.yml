@@ -1,0 +1,11 @@
+name: NexoSmithingRecipes
+version: '1.0'
+main: org.notionsmp.smithingPlugin.SmithingPlugin
+api-version: '1.21'
+author: YeahAkis_
+depend:
+  - Nexo
+commands:
+  nexosmithing:
+    description: Reloads the recipes.
+    usage: /nexosmithing reload
