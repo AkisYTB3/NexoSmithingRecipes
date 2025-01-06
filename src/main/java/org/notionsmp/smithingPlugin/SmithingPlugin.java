@@ -135,7 +135,9 @@ public class SmithingPlugin extends JavaPlugin implements Listener {
 
                 if (baseMeta != null && resultMeta != null) {
                     resultMeta.displayName(baseMeta.hasDisplayName() ? baseMeta.displayName() : resultMeta.displayName());
-                    resultMeta.lore(baseMeta.hasLore() ? baseMeta.lore() : resultMeta.lore());
+                    if (!resultMeta.hasLore()) {
+                        resultMeta.lore(baseMeta.hasLore() ? baseMeta.lore() : resultMeta.lore());
+                    }
 
                     if (copyEnchants) {
                         baseMeta.getEnchants().forEach((enchant, level) -> resultMeta.addEnchant(enchant, level, true));
